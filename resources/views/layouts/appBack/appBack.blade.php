@@ -11,13 +11,15 @@
     <title>{{ config('app.name', 'eCom') }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ url('appback/css/appBack.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/appBack.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <div class="app">
-        <div class="sidebar" data-background-color="black">
+    <div class="conteiner">
+        <div class="sidebar sidebar-wrapper" data-background-color="black">
         teste
         </div>
+
     </div>
 </body>
 </html>

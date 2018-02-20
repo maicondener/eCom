@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::group(['prefix' => 'pessoas'], function (){
+    Route::get('/', 'appBack\PessoaController@index');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 
