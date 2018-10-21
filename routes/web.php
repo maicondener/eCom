@@ -17,11 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['prefix' => 'pessoas'], function (){
-    Route::get('/', 'appBack\PessoaController@index');
+Route::group(['middleware' =>['auth']], function (){
+    Route::group(['prefix' => 'painel'], function () {
+        Route::get('/dashboard', 'painel\crtDashboard@index');
+    });
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 
